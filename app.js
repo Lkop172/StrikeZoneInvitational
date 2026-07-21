@@ -1,20 +1,18 @@
-// Load saved tournament data if it exists
+// Load saved tournament data
 
-let savedTournament = localStorage.getItem("tournamentData");
+const savedTournament = localStorage.getItem("tournamentData");
 
 if (savedTournament) {
 
-    Object.assign(
-        tournament,
-        JSON.parse(savedTournament)
-    );
+    const saved = JSON.parse(savedTournament);
+
+    tournament.name = saved.name;
+    tournament.currentRound = saved.currentRound;
+    tournament.teams = saved.teams;
 
 }
 
 console.log("Tournament app loaded");
-
-
-const standings = document.getElementById("teamStandings");
 
 
 // Calculate prelim standings

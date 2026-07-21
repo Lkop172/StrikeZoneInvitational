@@ -113,6 +113,14 @@ submitButton.addEventListener("click", function() {
     team.rounds.prelims = results;
 
 
-    alert("Scores saved!");
+// Save tournament
+
+localStorage.setItem(
+    "tournamentData",
+    JSON.stringify(tournament)
+);
+
+
+alert("Scores saved!");
 
 });

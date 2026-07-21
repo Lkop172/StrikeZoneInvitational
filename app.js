@@ -15,6 +15,9 @@ if (savedTournament) {
 console.log("Tournament loaded");
 const standings = document.getElementById("teamStandings");
 
+document.getElementById("currentRound").textContent =
+    tournament.currentRound;
+
 // Calculate prelim standings
 
 let rankedTeams = tournament.teams.map(function(team) {

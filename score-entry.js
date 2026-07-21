@@ -123,4 +123,9 @@ localStorage.setItem(
 
 alert("Scores saved!");
 
+
+console.log(
+    "Saved:",
+    JSON.parse(localStorage.getItem("tournamentData"))
+);
 });

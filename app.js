@@ -49,3 +49,24 @@ rankedTeams.forEach(function(team,index){
     standings.appendChild(row);
 
 });
+// Create semifinal bracket
+
+const bracket = document.getElementById("bracket");
+
+let semifinal1 = `
+    <div class="match">
+        <p>#1 ${rankedTeams[0].name}</p>
+        <strong>VS</strong>
+        <p>#4 ${rankedTeams[3].name}</p>
+    </div>
+`;
+
+let semifinal2 = `
+    <div class="match">
+        <p>#2 ${rankedTeams[1].name}</p>
+        <strong>VS</strong>
+        <p>#3 ${rankedTeams[2].name}</p>
+    </div>
+`;
+
+bracket.innerHTML = semifinal1 + semifinal2;

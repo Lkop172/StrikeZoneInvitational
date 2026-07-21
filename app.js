@@ -65,40 +65,43 @@ rankedTeams.forEach(function(team, index) {
 
 const semifinalContainer = document.getElementById("semifinals");
 
-let semifinal1 = `
-    <div class="match">
-        <p>#1 ${rankedTeams[0].name}</p>
-        <strong>VS</strong>
-        <p>#4 ${rankedTeams[3].name}</p>
-    </div>
+semifinalContainer.innerHTML = `
+
+<div class="match">
+    <p>#1 ${rankedTeams[0].name}</p>
+    <strong>VS</strong>
+    <p>#4 ${rankedTeams[3].name}</p>
+</div>
+
+
+<div class="match">
+    <p>#2 ${rankedTeams[1].name}</p>
+    <strong>VS</strong>
+    <p>#3 ${rankedTeams[2].name}</p>
+</div>
+
 `;
 
-let semifinal2 = `
-    <div class="match">
-        <p>#2 ${rankedTeams[1].name}</p>
-        <strong>VS</strong>
-        <p>#3 ${rankedTeams[2].name}</p>
-    </div>
-`;
 
-semifinalContainer.innerHTML = semifinal1 + semifinal2;
-
-
-// Placeholder for future rounds
+// Placeholder rounds
 
 document.getElementById("finals").innerHTML = `
-    <div class="match">
-        <p>Winner Game 1</p>
-        <strong>VS</strong>
-        <p>Winner Game 2</p>
-    </div>
+
+<div class="match">
+    <p>Winner Semi 1</p>
+    <strong>VS</strong>
+    <p>Winner Semi 2</p>
+</div>
+
 `;
 
 
 document.getElementById("placement").innerHTML = `
-    <div class="match">
-        <p>Loser Game 1</p>
-        <strong>VS</strong>
-        <p>Loser Game 2</p>
-    </div>
+
+<div class="match">
+    <p>Loser Semi 1</p>
+    <strong>VS</strong>
+    <p>Loser Semi 2</p>
+</div>
+
 `;

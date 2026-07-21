@@ -63,8 +63,7 @@ rankedTeams.forEach(function(team, index) {
 
 // Create semifinal bracket
 
-const bracket = document.getElementById("bracket");
-
+const semifinalContainer = document.getElementById("semifinals");
 
 let semifinal1 = `
     <div class="match">
@@ -74,7 +73,6 @@ let semifinal1 = `
     </div>
 `;
 
-
 let semifinal2 = `
     <div class="match">
         <p>#2 ${rankedTeams[1].name}</p>
@@ -83,5 +81,24 @@ let semifinal2 = `
     </div>
 `;
 
+semifinalContainer.innerHTML = semifinal1 + semifinal2;
 
-bracket.innerHTML = semifinal1 + semifinal2;
+
+// Placeholder for future rounds
+
+document.getElementById("finals").innerHTML = `
+    <div class="match">
+        <p>Winner Game 1</p>
+        <strong>VS</strong>
+        <p>Winner Game 2</p>
+    </div>
+`;
+
+
+document.getElementById("placement").innerHTML = `
+    <div class="match">
+        <p>Loser Game 1</p>
+        <strong>VS</strong>
+        <p>Loser Game 2</p>
+    </div>
+`;

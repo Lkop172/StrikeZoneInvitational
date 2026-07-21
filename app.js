@@ -1,8 +1,10 @@
-console.log("Strike Zone Invitational loaded!");
+console.log(tournament);
 
+console.log("Tournament Name:");
+console.log(tournament.name);
 
-// Future:
-// - score entry
-// - automatic seeding
-// - MVP calculations
-// - live updates
+console.log("Teams:");
+
+tournament.teams.forEach(function(team) {
+    console.log(team.name);
+});

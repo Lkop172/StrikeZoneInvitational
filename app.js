@@ -1,14 +1,12 @@
 console.log("App loaded");
 
-console.log(tournament);
-
 const standings = document.getElementById("teamStandings");
 
-console.log(standings);
+console.log("Standings table:", standings);
 
 tournament.teams.forEach(function(team, index) {
 
-    console.log(team.name);
+    console.log("Adding:", team.name);
 
     let row = document.createElement("tr");
 

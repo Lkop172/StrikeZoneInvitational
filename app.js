@@ -59,6 +59,8 @@ rankedTeams.forEach(function(team, index) {
 
 const bracket = document.getElementById("bracket");
 
+console.log("Bracket area:", bracket);
+
 let semifinal1 = `
     <div class="match">
         <p>#1 ${rankedTeams[0].name}</p>

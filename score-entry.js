@@ -2,9 +2,10 @@ console.log("Score entry loaded");
 
 const teamSelect = document.getElementById("team");
 const playersDiv = document.getElementById("players");
+const submitButton = document.getElementById("submitScores");
 
 
-// Load teams into dropdown
+// Load teams
 
 tournament.teams.forEach(function(team, index) {
 
@@ -18,7 +19,8 @@ tournament.teams.forEach(function(team, index) {
 });
 
 
-// Display bowlers when team changes
+
+// Create bowler inputs
 
 function loadPlayers() {
 
@@ -31,29 +33,19 @@ function loadPlayers() {
 
         let row = document.createElement("div");
 
+        row.className = "score-row";
+
         row.innerHTML = `
+
             <p>${player}</p>
 
-            <input 
-                type="number"
-                placeholder="Frame 1"
-            >
+            <input class="frame" type="number" placeholder="F1">
+            <input class="frame" type="number" placeholder="F2">
+            <input class="frame" type="number" placeholder="F3">
+            <input class="frame" type="number" placeholder="F4">
 
-            <input 
-                type="number"
-                placeholder="Frame 2"
-            >
-
-            <input 
-                type="number"
-                placeholder="Frame 3"
-            >
-
-            <input 
-                type="number"
-                placeholder="Frame 4"
-            >
         `;
+
 
         playersDiv.appendChild(row);
 
@@ -62,12 +54,65 @@ function loadPlayers() {
 }
 
 
+
 teamSelect.addEventListener(
     "change",
     loadPlayers
 );
 
 
-// Load first team automatically
 
 loadPlayers();
+
+
+
+// Submit scores
+
+submitButton.addEventListener("click", function() {
+
+    let team = tournament.teams[teamSelect.value];
+
+
+    let rows = document.querySelectorAll(".score-row");
+
+
+    let results = [];
+
+
+    rows.forEach(function(row, index) {
+
+        let inputs = row.querySelectorAll(".frame");
+
+
+        let total = 0;
+
+
+        inputs.forEach(function(input) {
+
+            total += Number(input.value) || 0;
+
+        });
+
+
+        results.push({
+
+            player: team.bowlers[index],
+
+            pins: total
+
+        });
+
+
+    });
+
+
+
+    console.log("Submitted scores:", results);
+
+
+    team.rounds.prelims = results;
+
+
+    alert("Scores saved!");
+
+});

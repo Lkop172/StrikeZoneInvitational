@@ -1,3 +1,16 @@
+// Load saved tournament data if it exists
+
+let savedTournament = localStorage.getItem("tournamentData");
+
+if (savedTournament) {
+
+    Object.assign(
+        tournament,
+        JSON.parse(savedTournament)
+    );
+
+}
+
 console.log("Tournament app loaded");
 
 

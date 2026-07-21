@@ -1,4 +1,4 @@
-console.log("Tournament loaded");
+console.log("Tournament app loaded");
 
 const standings = document.getElementById("teamStandings");
 
@@ -11,32 +11,36 @@ let rankedTeams = tournament.teams.map(function(team) {
         return player.pins;
     });
 
+    // Sort highest to lowest
     scores.sort(function(a, b) {
         return b - a;
     });
 
-    let total = scores.slice(0,4).reduce(function(sum, score) {
-        return sum + score;
-    },0);
+    // Count only top 4 bowlers
+    let teamTotal = scores
+        .slice(0, 4)
+        .reduce(function(total, score) {
+            return total + score;
+        }, 0);
 
     return {
         name: team.name,
-        pins: total
+        pins: teamTotal
     };
 
 });
 
 
-// Sort highest score first
+// Rank teams from highest pinfall to lowest
 
-rankedTeams.sort(function(a,b){
+rankedTeams.sort(function(a, b) {
     return b.pins - a.pins;
 });
 
 
 // Display standings
 
-rankedTeams.forEach(function(team,index){
+rankedTeams.forEach(function(team, index) {
 
     let row = document.createElement("tr");
 
@@ -49,6 +53,8 @@ rankedTeams.forEach(function(team,index){
     standings.appendChild(row);
 
 });
+
+
 // Create semifinal bracket
 
 const bracket = document.getElementById("bracket");
@@ -68,5 +74,6 @@ let semifinal2 = `
         <p>#3 ${rankedTeams[2].name}</p>
     </div>
 `;
+
 
 bracket.innerHTML = semifinal1 + semifinal2;

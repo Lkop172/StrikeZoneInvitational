@@ -16,7 +16,28 @@ const tournament = {
                 "Tyler Reed",
                 "Noah Bennett"
             ],
-            scores: []
+            scores: [
+    {
+        player: "Jake Mitchell",
+        pins: 34
+    },
+    {
+        player: "Ryan Carter",
+        pins: 28
+    },
+    {
+        player: "Mason Brooks",
+        pins: 31
+    },
+    {
+        player: "Tyler Reed",
+        pins: 22
+    },
+    {
+        player: "Noah Bennett",
+        pins: 30
+    }
+]
         },
 
         {
@@ -29,7 +50,13 @@ const tournament = {
                 "Owen Foster",
                 "Dylan Wright"
             ],
-            scores: []
+            scores: [
+    {player:"Ethan Parker", pins:32},
+    {player:"Lucas Hayes", pins:27},
+    {player:"Caleb Turner", pins:29},
+    {player:"Owen Foster", pins:25},
+    {player:"Dylan Wright", pins:31}
+]
         },
 
         {
@@ -42,7 +69,13 @@ const tournament = {
                 "Blake Morgan",
                 "Jackson King"
             ],
-            scores: []
+            scores: [
+    {player:"Aiden Collins", pins:30},
+    {player:"Logan Pierce", pins:26},
+    {player:"Carter Hayes", pins:28},
+    {player:"Blake Morgan", pins:24},
+    {player:"Jackson King", pins:29}
+]
         },
 
         {
@@ -55,7 +88,13 @@ const tournament = {
                 "Mason Clark",
                 "Evan Brooks"
             ],
-            scores: []
+            scores: [
+    {player:"Liam Scott", pins:31},
+    {player:"Connor Davis", pins:25},
+    {player:"Hunter Wilson", pins:27},
+    {player:"Mason Clark", pins:23},
+    {player:"Evan Brooks", pins:26}
+]
         }
 
     ]

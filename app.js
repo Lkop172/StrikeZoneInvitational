@@ -1,10 +1,21 @@
 console.log(tournament);
 
-console.log("Tournament Name:");
-console.log(tournament.name);
 
-console.log("Teams:");
+// Create team standings table
 
-tournament.teams.forEach(function(team) {
-    console.log(team.name);
+const standings = document.getElementById("teamStandings");
+
+
+tournament.teams.forEach(function(team, index) {
+
+    let row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${team.name}</td>
+        <td>--</td>
+    `;
+
+    standings.appendChild(row);
+
 });

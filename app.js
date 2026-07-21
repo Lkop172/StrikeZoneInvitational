@@ -12,8 +12,8 @@ if (savedTournament) {
 
 }
 
-console.log("Tournament app loaded");
-
+console.log("Tournament loaded");
+const standings = document.getElementById("teamStandings");
 
 // Calculate prelim standings
 

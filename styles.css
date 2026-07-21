@@ -141,3 +141,49 @@ footer {
     margin: 10px;
     color: white;
 }
+
+.bracket-container {
+    position: relative;
+}
+
+
+.round {
+    position: relative;
+}
+
+
+/* Lines connecting semifinal matches to finals */
+
+.round:nth-child(1) .match:first-child::after,
+.round:nth-child(1) .match:last-child::after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    width: 25px;
+    height: 2px;
+    background: white;
+}
+
+
+.round:nth-child(1) .match:first-child::after {
+    top: 50%;
+}
+
+
+.round:nth-child(1) .match:last-child::after {
+    top: 50%;
+}
+
+
+/* Space finals match */
+
+#finals .match {
+    margin-top: 80px;
+}
+
+
+/* Space placement match */
+
+#placement .match {
+    margin-top: 80px;
+}

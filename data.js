@@ -89,11 +89,11 @@ const tournament = {
                 "Evan Brooks"
             ],
             scores: [
-    {player:"Liam Scott", pins:31},
-    {player:"Connor Davis", pins:25},
-    {player:"Hunter Wilson", pins:27},
-    {player:"Mason Clark", pins:23},
-    {player:"Evan Brooks", pins:26}
+    {player:"Liam Scott", pins:40},
+    {player:"Connor Davis", pins:39},
+    {player:"Hunter Wilson", pins:38},
+    {player:"Mason Clark", pins:37},
+    {player:"Evan Brooks", pins:36}
 ]
         }
 

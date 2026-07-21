@@ -110,7 +110,9 @@ submitButton.addEventListener("click", function() {
     console.log("Submitted scores:", results);
 
 
-    team.rounds.prelims = results;
+    const selectedRound = document.getElementById("round").value;
+
+    team.rounds[selectedRound] = results;
 
 
 // Save tournament

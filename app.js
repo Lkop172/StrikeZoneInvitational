@@ -65,6 +65,9 @@ rankedTeams.forEach(function(team, index) {
 
 const semifinalContainer = document.getElementById("semifinals");
 
+console.log("Semifinal container:", semifinalContainer);
+console.log("Ranked teams:", rankedTeams);
+
 semifinalContainer.innerHTML = `
 
 <div class="match">

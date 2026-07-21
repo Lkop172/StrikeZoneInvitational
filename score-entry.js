@@ -114,6 +114,8 @@ submitButton.addEventListener("click", function() {
 
     team.rounds[selectedRound] = results;
 
+    tournament.currentRound = selectedRound;
+
 
 // Save tournament
 
